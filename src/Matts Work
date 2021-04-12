@@ -1,0 +1,16 @@
+df.isnull().any()
+
+
+nd = df[df.isnull().any(axis=1)]
+nd.head()
+
+
+df.loc[df['title'] == "Director of Sales", 'access_level'] = "Approval-Manager"
+df.loc[df['title'] == "Account Manager", 'access_level'] = "Account Admin"
+df.loc[df['title'] == "Sales Assistant", 'access_level'] = "Contract Entry"
+df.head()
+
+
+df.to_csv(r'C:\\Users\\firne\\bip-python-unh\\user_audit\\Final.csv')
+
+
